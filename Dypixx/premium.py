@@ -33,7 +33,7 @@ async def remove_prime(client, message):
         await message.reply("**🚫 You are banned from using this bot**",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Support 🧑‍💻", url=f"https://t.me/{ADMIN_USERNAME}")]]))
         return
     if IS_FSUB and not await get_fsub(client, message):return
-    await message.reply_text(PRIME_TXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔓 Close", callback_data="https://telegram.me/DypixxTech")]]))
+    await message.reply_text(PRIME_TXT, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🔓 Close", callback_data="close")]]))
 
 @Client.on_message(filters.command("myplan") & filters.private)
 async def my_plan(client, message):
